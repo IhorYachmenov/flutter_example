@@ -5,12 +5,22 @@ import 'dart:math';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  Color color;
+  Random random = new Random();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: RandomColor(),
+          child: Stack(
+            children: <Widget>[
+              RandomColor(),
+              Center(
+                child: Text("Hey there"),
+              ),
+            ],
+          ),
         ),
       ),
     );
